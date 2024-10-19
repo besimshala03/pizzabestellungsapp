@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../jgenhtml.xsl"?><coverage branch-rate="NaN" branches-covered="0" branches-valid="0" complexity="0" date="2024-07-01" filename="zutaten.dart" function-rate="NaN" functions-covered="0" functions-valid="0" line-rate="0.54545456" lines-covered="6" lines-valid="11" package="model" testname="lcov.info" version="1.6">
+    <lines>
+        <line number="1">
+            <code>class Zutaten {</code>
+        </line>
+        <line number="2">
+            <code>   int id;</code>
+        </line>
+        <line number="3">
+            <code>   String name;</code>
+        </line>
+        <line number="4">
+            <code>   double preis;</code>
+        </line>
+        <line number="5">
+            <code/>
+        </line>
+        <line hits="2" number="6">
+            <code>  Zutaten({ required this.id, required this.name, required this.preis});</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="7">
+            <code/>
+        </line>
+        <line hits="0" number="8">
+            <code>  factory Zutaten.fromJson(Map&lt;String, dynamic&gt; json) {</code>
+        </line>
+        <line hits="0" number="9">
+            <code>    return Zutaten(</code>
+        </line>
+        <line hits="0" number="10">
+            <code>      id: json['id'],</code>
+        </line>
+        <line hits="0" number="11">
+            <code>      name: json['name'],</code>
+        </line>
+        <line hits="0" number="12">
+            <code>      preis: json['preis'],</code>
+        </line>
+        <line number="13">
+            <code>    );</code>
+        </line>
+        <line number="14">
+            <code>  }</code>
+        </line>
+        <line number="15">
+            <code/>
+        </line>
+        <line hits="1" number="16">
+            <code>  Map&lt;String, dynamic&gt; toJson() {</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="17">
+            <code>    return {</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="18">
+            <code>      'id': id,</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="19">
+            <code>      'name': name,</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="20">
+            <code>      'preis': preis,</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="21">
+            <code>    };</code>
+        </line>
+        <line number="22">
+            <code>  }</code>
+        </line>
+        <line number="23">
+            <code>}</code>
+        </line>
+    </lines>
+    <config branch-coverage="true" description-file="false" function-coverage="true" genhtml_hi_limit="90" genhtml_med_limit="75" legend="false" no-sort="false" no-source="false" show-details="false"/>
+    <base href="../"/>
+    <base href="../"/>
+</coverage>

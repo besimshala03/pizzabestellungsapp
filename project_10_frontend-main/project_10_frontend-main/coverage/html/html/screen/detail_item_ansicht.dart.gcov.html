@@ -1,0 +1,634 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="../jgenhtml.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="../jgenhtml.js"></script>
+        <title>LCOV - lcov.info detail_item_ansicht.dart</title>
+    </head>
+    <body class="noscript nolegend">
+        <h1>LCOV - code coverage report</h1>
+        <div class="header">
+            <div class="row">
+                <dl class="pageView">
+                    <dt>Current view</dt>
+                    <dd>
+                        <a href="../index.html">top level</a> - <a href="index.html">screen</a> - detail_item_ansicht.dart
+                    </dd>
+                    <dt>Test</dt>
+                    <dd>lcov.info</dd>
+                    <dt>Date</dt>
+                    <dd>2024-07-01</dd>
+                    <dt class="legend">Legend</dt>
+                    <dd class="legend">
+                        <dl class="legend">
+                            <dt>Lines</dt>
+                            <dd class="lineCov">hit</dd>
+                            <dd class="lineNoCov">not hit</dd>
+                            <dt>Branches</dt>
+                            <dd class="taken"> taken</dd>
+                            <dd class="noTaken"> not taken</dd>
+                            <dd class="lineNoCov"># not executed</dd>
+                        </dl>
+                    </dd>
+                </dl>
+                <table class="stats">
+                    <thead>
+                        <tr>
+                            <td></td><th scope="col">Hit</th><th scope="col">Total</th><th scope="col">Coverage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Lines</th><td>72</td><td>93</td><td class="med">77.4%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Functions</th><td>0</td><td>0</td><td class="high">-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Branches</th><td>0</td><td>0</td><td class="high">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <table class="coverage" title="Each row represents a line of source code">
+            <caption>Each row represents a line of source code</caption>
+            <thead>
+                <tr>
+                    <th>Line</th><th>Branch</th><th>Hits</th><th>Source code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="noop" title="Line 1" id="line1">
+                    <td>1</td><td></td><td></td><td><code>import 'package:flutter/material.dart';</code></td>
+                </tr>
+                <tr class="noop" title="Line 2" id="line2">
+                    <td>2</td><td></td><td></td><td><code>import 'package:project_10_frontend/backend/backend.dart';</code></td>
+                </tr>
+                <tr class="noop" title="Line 3" id="line3">
+                    <td>3</td><td></td><td></td><td><code>import 'package:project_10_frontend/model/pizza.dart';</code></td>
+                </tr>
+                <tr class="noop" title="Line 4" id="line4">
+                    <td>4</td><td></td><td></td><td><code>import 'package:project_10_frontend/model/zutaten.dart';</code></td>
+                </tr>
+                <tr class="noop" title="Line 5" id="line5">
+                    <td>5</td><td></td><td></td><td><code>import 'package:http/http.dart' as http;</code></td>
+                </tr>
+                <tr class="noop" title="Line 6" id="line6">
+                    <td>6</td><td></td><td></td><td><code>import 'package:project_10_frontend/warenkorb/cart.dart';</code></td>
+                </tr>
+                <tr class="noop" title="Line 7" id="line7">
+                    <td>7</td><td></td><td></td><td><code></code></td>
+                </tr>
+                <tr class="noop" title="Line 8" id="line8">
+                    <td>8</td><td></td><td></td><td><code>class PizzaDetailScreen extends StatefulWidget {</code></td>
+                </tr>
+                <tr class="noop" title="Line 9" id="line9">
+                    <td>9</td><td></td><td></td><td><code>  final Pizza pizza;</code></td>
+                </tr>
+                <tr class="noop" title="Line 10" id="line10">
+                    <td>10</td><td></td><td></td><td><code>  final Backend backend;</code></td>
+                </tr>
+                <tr class="noop" title="Line 11" id="line11">
+                    <td>11</td><td></td><td></td><td><code>  final http.Client client;</code></td>
+                </tr>
+                <tr class="noop" title="Line 12" id="line12">
+                    <td>12</td><td></td><td></td><td><code></code></td>
+                </tr>
+                <tr class="lineCov" title="Line 13" id="line13">
+                    <td>13</td><td></td><td>1</td><td><code>  PizzaDetailScreen({required this.pizza, required this.backend, required this.client});</code></td>
+                </tr>
+                <tr class="noop" title="Line 14" id="line14">
+                    <td>14</td><td></td><td></td><td><code></code></td>
+                </tr>
+                <tr class="lineCov" title="Line 15" id="line15">
+                    <td>15</td><td></td><td>1</td><td><code>  @override</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 16" id="line16">
+                    <td>16</td><td></td><td>1</td><td><code>  _PizzaDetailScreenState createState() =&gt; _PizzaDetailScreenState();</code></td>
+                </tr>
+                <tr class="noop" title="Line 17" id="line17">
+                    <td>17</td><td></td><td></td><td><code>}</code></td>
+                </tr>
+                <tr class="noop" title="Line 18" id="line18">
+                    <td>18</td><td></td><td></td><td><code></code></td>
+                </tr>
+                <tr class="noop" title="Line 19" id="line19">
+                    <td>19</td><td></td><td></td><td><code>class _PizzaDetailScreenState extends State&lt;PizzaDetailScreen&gt; {</code></td>
+                </tr>
+                <tr class="noop" title="Line 20" id="line20">
+                    <td>20</td><td></td><td></td><td><code>  List&lt;Zutaten&gt; selectedZutaten = [];</code></td>
+                </tr>
+                <tr class="noop" title="Line 21" id="line21">
+                    <td>21</td><td></td><td></td><td><code>  List&lt;Zutaten&gt; availableZutaten = [];</code></td>
+                </tr>
+                <tr class="noop" title="Line 22" id="line22">
+                    <td>22</td><td></td><td></td><td><code>  late double totalPrice;</code></td>
+                </tr>
+                <tr class="noop" title="Line 23" id="line23">
+                    <td>23</td><td></td><td></td><td><code></code></td>
+                </tr>
+                <tr class="lineCov" title="Line 24" id="line24">
+                    <td>24</td><td></td><td>1</td><td><code>  @override</code></td>
+                </tr>
+                <tr class="noop" title="Line 25" id="line25">
+                    <td>25</td><td></td><td></td><td><code>  void initState() {</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 26" id="line26">
+                    <td>26</td><td></td><td>1</td><td><code>    super.initState();</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 27" id="line27">
+                    <td>27</td><td></td><td>4</td><td><code>    totalPrice = widget.pizza.preis;</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 28" id="line28">
+                    <td>28</td><td></td><td>1</td><td><code>    _loadZutaten();</code></td>
+                </tr>
+                <tr class="noop" title="Line 29" id="line29">
+                    <td>29</td><td></td><td></td><td><code>  }</code></td>
+                </tr>
+                <tr class="noop" title="Line 30" id="line30">
+                    <td>30</td><td></td><td></td><td><code></code></td>
+                </tr>
+                <tr class="lineCov" title="Line 31" id="line31">
+                    <td>31</td><td></td><td>1</td><td><code>  void _loadZutaten() async {</code></td>
+                </tr>
+                <tr class="noop" title="Line 32" id="line32">
+                    <td>32</td><td></td><td></td><td><code>    try {</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 33" id="line33">
+                    <td>33</td><td></td><td>5</td><td><code>      List&lt;Zutaten&gt; zutaten = await widget.backend.fetchZutatenData(widget.client);</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 34" id="line34">
+                    <td>34</td><td></td><td>2</td><td><code>      setState(() {</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 35" id="line35">
+                    <td>35</td><td></td><td>1</td><td><code>        availableZutaten = zutaten;</code></td>
+                </tr>
+                <tr class="noop" title="Line 36" id="line36">
+                    <td>36</td><td></td><td></td><td><code>      });</code></td>
+                </tr>
+                <tr class="noop" title="Line 37" id="line37">
+                    <td>37</td><td></td><td></td><td><code>    } catch (e) {</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 38" id="line38">
+                    <td>38</td><td></td><td>0</td><td><code>      print('Fehler beim Laden der Zutaten: $e');</code></td>
+                </tr>
+                <tr class="noop" title="Line 39" id="line39">
+                    <td>39</td><td></td><td></td><td><code>    }</code></td>
+                </tr>
+                <tr class="noop" title="Line 40" id="line40">
+                    <td>40</td><td></td><td></td><td><code>  }</code></td>
+                </tr>
+                <tr class="noop" title="Line 41" id="line41">
+                    <td>41</td><td></td><td></td><td><code></code></td>
+                </tr>
+                <tr class="lineCov" title="Line 42" id="line42">
+                    <td>42</td><td></td><td>1</td><td><code>  void _toggleZutat(Zutaten zutat) {</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 43" id="line43">
+                    <td>43</td><td></td><td>2</td><td><code>    setState(() {</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 44" id="line44">
+                    <td>44</td><td></td><td>2</td><td><code>      if (selectedZutaten.contains(zutat)) {</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 45" id="line45">
+                    <td>45</td><td></td><td>0</td><td><code>        selectedZutaten.remove(zutat);</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 46" id="line46">
+                    <td>46</td><td></td><td>0</td><td><code>        totalPrice -= zutat.preis;</code></td>
+                </tr>
+                <tr class="noop" title="Line 47" id="line47">
+                    <td>47</td><td></td><td></td><td><code>      } else {</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 48" id="line48">
+                    <td>48</td><td></td><td>2</td><td><code>        selectedZutaten.add(zutat);</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 49" id="line49">
+                    <td>49</td><td></td><td>3</td><td><code>        totalPrice += zutat.preis;</code></td>
+                </tr>
+                <tr class="noop" title="Line 50" id="line50">
+                    <td>50</td><td></td><td></td><td><code>      }</code></td>
+                </tr>
+                <tr class="noop" title="Line 51" id="line51">
+                    <td>51</td><td></td><td></td><td><code>    });</code></td>
+                </tr>
+                <tr class="noop" title="Line 52" id="line52">
+                    <td>52</td><td></td><td></td><td><code>  }</code></td>
+                </tr>
+                <tr class="noop" title="Line 53" id="line53">
+                    <td>53</td><td></td><td></td><td><code></code></td>
+                </tr>
+                <tr class="lineCov" title="Line 54" id="line54">
+                    <td>54</td><td></td><td>1</td><td><code>  @override</code></td>
+                </tr>
+                <tr class="noop" title="Line 55" id="line55">
+                    <td>55</td><td></td><td></td><td><code>  Widget build(BuildContext context) {</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 56" id="line56">
+                    <td>56</td><td></td><td>1</td><td><code>    return Scaffold(</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 57" id="line57">
+                    <td>57</td><td></td><td>1</td><td><code>      appBar: AppBar(</code></td>
+                </tr>
+                <tr class="noop" title="Line 58" id="line58">
+                    <td>58</td><td></td><td></td><td><code>        backgroundColor: Colors.transparent,</code></td>
+                </tr>
+                <tr class="noop" title="Line 59" id="line59">
+                    <td>59</td><td></td><td></td><td><code>        elevation: 0,</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 60" id="line60">
+                    <td>60</td><td></td><td>1</td><td><code>        leading: IconButton(</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 61" id="line61">
+                    <td>61</td><td></td><td>1</td><td><code>          icon: Icon(Icons.close, color: Colors.black),</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 62" id="line62">
+                    <td>62</td><td></td><td>0</td><td><code>          onPressed: () {</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 63" id="line63">
+                    <td>63</td><td></td><td>0</td><td><code>            Navigator.pop(context);</code></td>
+                </tr>
+                <tr class="noop" title="Line 64" id="line64">
+                    <td>64</td><td></td><td></td><td><code>          },</code></td>
+                </tr>
+                <tr class="noop" title="Line 65" id="line65">
+                    <td>65</td><td></td><td></td><td><code>        ),</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 66" id="line66">
+                    <td>66</td><td></td><td>1</td><td><code>        actions: [</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 67" id="line67">
+                    <td>67</td><td></td><td>1</td><td><code>          IconButton(</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 68" id="line68">
+                    <td>68</td><td></td><td>1</td><td><code>            icon: Icon(Icons.share, color: Colors.black),</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 69" id="line69">
+                    <td>69</td><td></td><td>0</td><td><code>            onPressed: () {},</code></td>
+                </tr>
+                <tr class="noop" title="Line 70" id="line70">
+                    <td>70</td><td></td><td></td><td><code>          ),</code></td>
+                </tr>
+                <tr class="noop" title="Line 71" id="line71">
+                    <td>71</td><td></td><td></td><td><code>        ],</code></td>
+                </tr>
+                <tr class="noop" title="Line 72" id="line72">
+                    <td>72</td><td></td><td></td><td><code>      ),</code></td>
+                </tr>
+                <tr class="noop" title="Line 73" id="line73">
+                    <td>73</td><td></td><td></td><td><code>      extendBodyBehindAppBar: true,</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 74" id="line74">
+                    <td>74</td><td></td><td>1</td><td><code>      body: SingleChildScrollView(</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 75" id="line75">
+                    <td>75</td><td></td><td>1</td><td><code>        child: Column(</code></td>
+                </tr>
+                <tr class="noop" title="Line 76" id="line76">
+                    <td>76</td><td></td><td></td><td><code>          crossAxisAlignment: CrossAxisAlignment.start,</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 77" id="line77">
+                    <td>77</td><td></td><td>1</td><td><code>          children: [</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 78" id="line78">
+                    <td>78</td><td></td><td>1</td><td><code>            Stack(</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 79" id="line79">
+                    <td>79</td><td></td><td>1</td><td><code>              children: [</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 80" id="line80">
+                    <td>80</td><td></td><td>1</td><td><code>                Image.asset(</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 81" id="line81">
+                    <td>81</td><td></td><td>4</td><td><code>                  'assets/Pizza_Bilder/${widget.pizza.imageUrl}',</code></td>
+                </tr>
+                <tr class="noop" title="Line 82" id="line82">
+                    <td>82</td><td></td><td></td><td><code>                  width: double.infinity,</code></td>
+                </tr>
+                <tr class="noop" title="Line 83" id="line83">
+                    <td>83</td><td></td><td></td><td><code>                  height: 250,</code></td>
+                </tr>
+                <tr class="noop" title="Line 84" id="line84">
+                    <td>84</td><td></td><td></td><td><code>                  fit: BoxFit.cover,</code></td>
+                </tr>
+                <tr class="noop" title="Line 85" id="line85">
+                    <td>85</td><td></td><td></td><td><code>                ),</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 86" id="line86">
+                    <td>86</td><td></td><td>1</td><td><code>                Positioned(</code></td>
+                </tr>
+                <tr class="noop" title="Line 87" id="line87">
+                    <td>87</td><td></td><td></td><td><code>                  top: 40,</code></td>
+                </tr>
+                <tr class="noop" title="Line 88" id="line88">
+                    <td>88</td><td></td><td></td><td><code>                  left: 16,</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 89" id="line89">
+                    <td>89</td><td></td><td>1</td><td><code>                  child: IconButton(</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 90" id="line90">
+                    <td>90</td><td></td><td>1</td><td><code>                    icon: Icon(Icons.close, color: Colors.white),</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 91" id="line91">
+                    <td>91</td><td></td><td>0</td><td><code>                    onPressed: () {</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 92" id="line92">
+                    <td>92</td><td></td><td>0</td><td><code>                      Navigator.pop(context);</code></td>
+                </tr>
+                <tr class="noop" title="Line 93" id="line93">
+                    <td>93</td><td></td><td></td><td><code>                    },</code></td>
+                </tr>
+                <tr class="noop" title="Line 94" id="line94">
+                    <td>94</td><td></td><td></td><td><code>                  ),</code></td>
+                </tr>
+                <tr class="noop" title="Line 95" id="line95">
+                    <td>95</td><td></td><td></td><td><code>                ),</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 96" id="line96">
+                    <td>96</td><td></td><td>1</td><td><code>                Positioned(</code></td>
+                </tr>
+                <tr class="noop" title="Line 97" id="line97">
+                    <td>97</td><td></td><td></td><td><code>                  top: 40,</code></td>
+                </tr>
+                <tr class="noop" title="Line 98" id="line98">
+                    <td>98</td><td></td><td></td><td><code>                  right: 16,</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 99" id="line99">
+                    <td>99</td><td></td><td>1</td><td><code>                  child: IconButton(</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 100" id="line100">
+                    <td>100</td><td></td><td>1</td><td><code>                    icon: Icon(Icons.share, color: Colors.white),</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 101" id="line101">
+                    <td>101</td><td></td><td>0</td><td><code>                    onPressed: () {},</code></td>
+                </tr>
+                <tr class="noop" title="Line 102" id="line102">
+                    <td>102</td><td></td><td></td><td><code>                  ),</code></td>
+                </tr>
+                <tr class="noop" title="Line 103" id="line103">
+                    <td>103</td><td></td><td></td><td><code>                ),</code></td>
+                </tr>
+                <tr class="noop" title="Line 104" id="line104">
+                    <td>104</td><td></td><td></td><td><code>              ],</code></td>
+                </tr>
+                <tr class="noop" title="Line 105" id="line105">
+                    <td>105</td><td></td><td></td><td><code>            ),</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 106" id="line106">
+                    <td>106</td><td></td><td>1</td><td><code>            Padding(</code></td>
+                </tr>
+                <tr class="noop" title="Line 107" id="line107">
+                    <td>107</td><td></td><td></td><td><code>              padding: const EdgeInsets.all(16.0),</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 108" id="line108">
+                    <td>108</td><td></td><td>1</td><td><code>              child: Column(</code></td>
+                </tr>
+                <tr class="noop" title="Line 109" id="line109">
+                    <td>109</td><td></td><td></td><td><code>                crossAxisAlignment: CrossAxisAlignment.start,</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 110" id="line110">
+                    <td>110</td><td></td><td>1</td><td><code>                children: [</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 111" id="line111">
+                    <td>111</td><td></td><td>1</td><td><code>                  Text(</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 112" id="line112">
+                    <td>112</td><td></td><td>3</td><td><code>                    widget.pizza.name,</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 113" id="line113">
+                    <td>113</td><td></td><td>1</td><td><code>                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),</code></td>
+                </tr>
+                <tr class="noop" title="Line 114" id="line114">
+                    <td>114</td><td></td><td></td><td><code>                  ),</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 115" id="line115">
+                    <td>115</td><td></td><td>1</td><td><code>                  SizedBox(height: 8),</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 116" id="line116">
+                    <td>116</td><td></td><td>1</td><td><code>                  Text(</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 117" id="line117">
+                    <td>117</td><td></td><td>5</td><td><code>                    '${widget.pizza.preis.toStringAsFixed(2)} &acirc;&sbquo;&not;',</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 118" id="line118">
+                    <td>118</td><td></td><td>1</td><td><code>                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),</code></td>
+                </tr>
+                <tr class="noop" title="Line 119" id="line119">
+                    <td>119</td><td></td><td></td><td><code>                  ),</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 120" id="line120">
+                    <td>120</td><td></td><td>1</td><td><code>                  SizedBox(height: 8),</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 121" id="line121">
+                    <td>121</td><td></td><td>1</td><td><code>                  Text(</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 122" id="line122">
+                    <td>122</td><td></td><td>3</td><td><code>                    widget.pizza.beschreibung,</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 123" id="line123">
+                    <td>123</td><td></td><td>1</td><td><code>                    style: TextStyle(fontSize: 16),</code></td>
+                </tr>
+                <tr class="noop" title="Line 124" id="line124">
+                    <td>124</td><td></td><td></td><td><code>                  ),</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 125" id="line125">
+                    <td>125</td><td></td><td>1</td><td><code>                  SizedBox(height: 8),</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 126" id="line126">
+                    <td>126</td><td></td><td>2</td><td><code>                  availableZutaten.isEmpty</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 127" id="line127">
+                    <td>127</td><td></td><td>1</td><td><code>                      ? CircularProgressIndicator()</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 128" id="line128">
+                    <td>128</td><td></td><td>1</td><td><code>                      : Column(</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 129" id="line129">
+                    <td>129</td><td></td><td>3</td><td><code>                          children: availableZutaten.map((zutat) {</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 130" id="line130">
+                    <td>130</td><td></td><td>2</td><td><code>                            bool isSelected = selectedZutaten.contains(zutat);</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 131" id="line131">
+                    <td>131</td><td></td><td>1</td><td><code>                            return ListTile(</code></td>
+                </tr>
+                <tr class="noop" title="Line 132" id="line132">
+                    <td>132</td><td></td><td></td><td><code>                              contentPadding: EdgeInsets.zero,</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 133" id="line133">
+                    <td>133</td><td></td><td>2</td><td><code>                              title: Text(zutat.name),</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 134" id="line134">
+                    <td>134</td><td></td><td>4</td><td><code>                              subtitle: Text('${zutat.preis.toStringAsFixed(2)} &acirc;&sbquo;&not;'),</code></td>
+                </tr>
+                <tr class="noop" title="Line 135" id="line135">
+                    <td>135</td><td></td><td></td><td><code>                              trailing: isSelected</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 136" id="line136">
+                    <td>136</td><td></td><td>1</td><td><code>                                  ? Icon(Icons.check_box, color: Colors.green)</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 137" id="line137">
+                    <td>137</td><td></td><td>1</td><td><code>                                  : Icon(Icons.check_box_outline_blank),</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 138" id="line138">
+                    <td>138</td><td></td><td>1</td><td><code>                              onTap: () {</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 139" id="line139">
+                    <td>139</td><td></td><td>1</td><td><code>                                _toggleZutat(zutat);</code></td>
+                </tr>
+                <tr class="noop" title="Line 140" id="line140">
+                    <td>140</td><td></td><td></td><td><code>                              },</code></td>
+                </tr>
+                <tr class="noop" title="Line 141" id="line141">
+                    <td>141</td><td></td><td></td><td><code>                            );</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 142" id="line142">
+                    <td>142</td><td></td><td>1</td><td><code>                          }).toList(),</code></td>
+                </tr>
+                <tr class="noop" title="Line 143" id="line143">
+                    <td>143</td><td></td><td></td><td><code>                        ),</code></td>
+                </tr>
+                <tr class="noop" title="Line 144" id="line144">
+                    <td>144</td><td></td><td></td><td><code>                ],</code></td>
+                </tr>
+                <tr class="noop" title="Line 145" id="line145">
+                    <td>145</td><td></td><td></td><td><code>              ),</code></td>
+                </tr>
+                <tr class="noop" title="Line 146" id="line146">
+                    <td>146</td><td></td><td></td><td><code>            ),</code></td>
+                </tr>
+                <tr class="noop" title="Line 147" id="line147">
+                    <td>147</td><td></td><td></td><td><code>          ],</code></td>
+                </tr>
+                <tr class="noop" title="Line 148" id="line148">
+                    <td>148</td><td></td><td></td><td><code>        ),</code></td>
+                </tr>
+                <tr class="noop" title="Line 149" id="line149">
+                    <td>149</td><td></td><td></td><td><code>      ),</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 150" id="line150">
+                    <td>150</td><td></td><td>1</td><td><code>      bottomNavigationBar: BottomAppBar(</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 151" id="line151">
+                    <td>151</td><td></td><td>1</td><td><code>        child: Container(</code></td>
+                </tr>
+                <tr class="noop" title="Line 152" id="line152">
+                    <td>152</td><td></td><td></td><td><code>          width: double.infinity,</code></td>
+                </tr>
+                <tr class="noop" title="Line 153" id="line153">
+                    <td>153</td><td></td><td></td><td><code>          color: Colors.black,</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 154" id="line154">
+                    <td>154</td><td></td><td>1</td><td><code>          child: Padding(</code></td>
+                </tr>
+                <tr class="noop" title="Line 155" id="line155">
+                    <td>155</td><td></td><td></td><td><code>            padding: const EdgeInsets.symmetric(vertical: 16.0),</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 156" id="line156">
+                    <td>156</td><td></td><td>1</td><td><code>            child: TextButton(</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 157" id="line157">
+                    <td>157</td><td></td><td>0</td><td><code>              onPressed: () {</code></td>
+                </tr>
+                <tr class="noop" title="Line 158" id="line158">
+                    <td>158</td><td></td><td></td><td><code>                // Erstellen einer neuen Pizza-Instanz mit den ausgew&Atilde;&curren;hlten Zutaten</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 159" id="line159">
+                    <td>159</td><td></td><td>0</td><td><code>                final pizzaMitZutaten = Pizza(</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 160" id="line160">
+                    <td>160</td><td></td><td>0</td><td><code>                  id: widget.pizza.id,</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 161" id="line161">
+                    <td>161</td><td></td><td>0</td><td><code>                  name: widget.pizza.name,</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 162" id="line162">
+                    <td>162</td><td></td><td>0</td><td><code>                  beschreibung: widget.pizza.beschreibung,</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 163" id="line163">
+                    <td>163</td><td></td><td>0</td><td><code>                  preis: totalPrice,</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 164" id="line164">
+                    <td>164</td><td></td><td>0</td><td><code>                  imageUrl: widget.pizza.imageUrl,</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 165" id="line165">
+                    <td>165</td><td></td><td>0</td><td><code>                  zutaten: selectedZutaten,</code></td>
+                </tr>
+                <tr class="noop" title="Line 166" id="line166">
+                    <td>166</td><td></td><td></td><td><code>                );</code></td>
+                </tr>
+                <tr class="noop" title="Line 167" id="line167">
+                    <td>167</td><td></td><td></td><td><code></code></td>
+                </tr>
+                <tr class="noop" title="Line 168" id="line168">
+                    <td>168</td><td></td><td></td><td><code>                // Artikel zum Warenkorb hinzuf&Atilde;&frac14;gen</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 169" id="line169">
+                    <td>169</td><td></td><td>0</td><td><code>                Cart().addItem(pizzaMitZutaten);</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 170" id="line170">
+                    <td>170</td><td></td><td>0</td><td><code>                print(pizzaMitZutaten);</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 171" id="line171">
+                    <td>171</td><td></td><td>0</td><td><code>                print(Cart().items);</code></td>
+                </tr>
+                <tr class="noop" title="Line 172" id="line172">
+                    <td>172</td><td></td><td></td><td><code></code></td>
+                </tr>
+                <tr class="noop" title="Line 173" id="line173">
+                    <td>173</td><td></td><td></td><td><code>                // Zur&Atilde;&frac14;ck zur &Atilde;œbersicht navigieren</code></td>
+                </tr>
+                <tr class="lineNoCov" title="Line 174" id="line174">
+                    <td>174</td><td></td><td>0</td><td><code>                Navigator.pop(context);</code></td>
+                </tr>
+                <tr class="noop" title="Line 175" id="line175">
+                    <td>175</td><td></td><td></td><td><code>              },</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 176" id="line176">
+                    <td>176</td><td></td><td>1</td><td><code>              child: Text(</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 177" id="line177">
+                    <td>177</td><td></td><td>3</td><td><code>                'Dem Warenkorb hinzuf&Atilde;&frac14;gen &acirc;&euro;&cent; ${totalPrice.toStringAsFixed(2)} &acirc;&sbquo;&not;',</code></td>
+                </tr>
+                <tr class="lineCov" title="Line 178" id="line178">
+                    <td>178</td><td></td><td>1</td><td><code>                style: TextStyle(fontSize: 16, color: Colors.white),</code></td>
+                </tr>
+                <tr class="noop" title="Line 179" id="line179">
+                    <td>179</td><td></td><td></td><td><code>              ),</code></td>
+                </tr>
+                <tr class="noop" title="Line 180" id="line180">
+                    <td>180</td><td></td><td></td><td><code>            ),</code></td>
+                </tr>
+                <tr class="noop" title="Line 181" id="line181">
+                    <td>181</td><td></td><td></td><td><code>          ),</code></td>
+                </tr>
+                <tr class="noop" title="Line 182" id="line182">
+                    <td>182</td><td></td><td></td><td><code>        ),</code></td>
+                </tr>
+                <tr class="noop" title="Line 183" id="line183">
+                    <td>183</td><td></td><td></td><td><code>      ),</code></td>
+                </tr>
+                <tr class="noop" title="Line 184" id="line184">
+                    <td>184</td><td></td><td></td><td><code>    );</code></td>
+                </tr>
+                <tr class="noop" title="Line 185" id="line185">
+                    <td>185</td><td></td><td></td><td><code>  }</code></td>
+                </tr>
+                <tr class="noop" title="Line 186" id="line186">
+                    <td>186</td><td></td><td></td><td><code>}</code></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="footer">
+            <p>
+                Generated by: <a href="https://github.com/ricksbrown/jgenhtml">JGENHTML version 1.6</a>
+            </p>
+        </div>
+        <div class="controls">
+            <fieldset>
+                <legend>Choose Features</legend><label for="nofunc">Function coverage</label><input id="nofunc" type="checkbox" checked><label for="nobranch">Branch coverage</label><input id="nobranch" type="checkbox" checked><label for="nolegend">Legend</label><input id="nolegend" type="checkbox">
+            </fieldset>
+        </div>
+    </body>
+</html>

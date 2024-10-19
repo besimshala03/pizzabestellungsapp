@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../jgenhtml.xsl"?><coverage branch-rate="NaN" branches-covered="0" branches-valid="0" complexity="0" date="2024-07-01" filename="Bestellung.dart" function-rate="NaN" functions-covered="0" functions-valid="0" line-rate="0.7916667" lines-covered="19" lines-valid="24" package="model" testname="lcov.info" version="1.6">
+    <lines>
+        <line number="1">
+            <code>import 'package:project_10_frontend/model/getraenke.dart';</code>
+        </line>
+        <line number="2">
+            <code>import 'package:project_10_frontend/model/pizza.dart';</code>
+        </line>
+        <line number="3">
+            <code/>
+        </line>
+        <line number="4">
+            <code>class Bestellung {</code>
+        </line>
+        <line number="5">
+            <code>  final int id;</code>
+        </line>
+        <line number="6">
+            <code>  final List&lt;Pizza&gt; pizza;</code>
+        </line>
+        <line number="7">
+            <code>  final List&lt;Getraenke&gt; getraenke;</code>
+        </line>
+        <line number="8">
+            <code>  final double preis;</code>
+        </line>
+        <line number="9">
+            <code>  final String datumUhrzeit;</code>
+        </line>
+        <line number="10">
+            <code>  final String adresse;</code>
+        </line>
+        <line number="11">
+            <code>  final String kundenname;</code>
+        </line>
+        <line number="12">
+            <code/>
+        </line>
+        <line number="13">
+            <code/>
+        </line>
+        <line hits="3" number="14">
+            <code>  Bestellung({</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="15">
+            <code>    required this.id,</code>
+        </line>
+        <line number="16">
+            <code>    this.pizza = const [],</code>
+        </line>
+        <line number="17">
+            <code>    this.getraenke = const [],</code>
+        </line>
+        <line number="18">
+            <code>    required this.preis,</code>
+        </line>
+        <line number="19">
+            <code>    required this.datumUhrzeit,</code>
+        </line>
+        <line number="20">
+            <code>    required this.adresse,</code>
+        </line>
+        <line number="21">
+            <code>    required this.kundenname,</code>
+        </line>
+        <line number="22">
+            <code>  });</code>
+        </line>
+        <line number="23">
+            <code/>
+        </line>
+        <line hits="3" number="24">
+            <code>  factory Bestellung.fromJson(Map&lt;String, dynamic&gt; json) {</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="3" number="25">
+            <code>    return Bestellung(</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="3" number="26">
+            <code>      id: json['id'],</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="3" number="27">
+            <code>      pizza: [], // Sie mÃ¼ssen sicherstellen, dass diese Liste korrekt deserialisiert wird</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="3" number="28">
+            <code>      getraenke: [], // Sie mÃ¼ssen sicherstellen, dass diese Liste korrekt deserialisiert wird</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="3" number="29">
+            <code>      preis: json['preis'],</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="3" number="30">
+            <code>      datumUhrzeit: json['datumUhrzeit'],</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="3" number="31">
+            <code>      adresse: json['adresse'],</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="3" number="32">
+            <code>      kundenname: json['kundenname'],</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="33">
+            <code>    );</code>
+        </line>
+        <line number="34">
+            <code>  }</code>
+        </line>
+        <line number="35">
+            <code/>
+        </line>
+        <line hits="1" number="36">
+            <code>  Map&lt;String, dynamic&gt; toJson() {</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="37">
+            <code>    return {</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="38">
+            <code>      'id': id,</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="39">
+            <code>      'pizza': [], // Sie mÃ¼ssen sicherstellen, dass diese Liste korrekt serialisiert wird</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="40">
+            <code>      'getraenke': [], // Sie mÃ¼ssen sicherstellen, dass diese Liste korrekt serialisiert wird</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="41">
+            <code>      'preis': preis,</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="42">
+            <code>      'datumUhrzeit': datumUhrzeit,</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="43">
+            <code>      'adresse': adresse,</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="44">
+            <code>      'kundenname': kundenname,</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="45">
+            <code>    };</code>
+        </line>
+        <line number="46">
+            <code>  }</code>
+        </line>
+        <line number="47">
+            <code/>
+        </line>
+        <line hits="0" number="48">
+            <code>  double calculateTotal() {</code>
+        </line>
+        <line number="49">
+            <code>    double total = 0;</code>
+        </line>
+        <line number="50">
+            <code/>
+        </line>
+        <line hits="0" number="51">
+            <code>    for (var pizza in pizza) {</code>
+        </line>
+        <line hits="0" number="52">
+            <code>      total += pizza.preis;</code>
+        </line>
+        <line number="53">
+            <code>    }</code>
+        </line>
+        <line number="54">
+            <code/>
+        </line>
+        <line hits="0" number="55">
+            <code>    for (var getraenke in getraenke) {</code>
+        </line>
+        <line hits="0" number="56">
+            <code>      total += getraenke.preis;</code>
+        </line>
+        <line number="57">
+            <code>    }</code>
+        </line>
+        <line number="58">
+            <code/>
+        </line>
+        <line number="59">
+            <code>    return total;</code>
+        </line>
+        <line number="60">
+            <code>  }</code>
+        </line>
+        <line number="61">
+            <code>}</code>
+        </line>
+    </lines>
+    <config branch-coverage="true" description-file="false" function-coverage="true" genhtml_hi_limit="90" genhtml_med_limit="75" legend="false" no-sort="false" no-source="false" show-details="false"/>
+    <base href="../"/>
+    <base href="../"/>
+</coverage>

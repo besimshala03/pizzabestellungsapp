@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../jgenhtml.xsl"?><coverage branch-rate="NaN" branches-covered="0" branches-valid="0" complexity="0" date="2024-07-01" filename="index" function-rate="NaN" functions-covered="0" functions-valid="0" line-rate="0.6969697" lines-covered="46" lines-valid="66" package="model" testname="lcov.info" version="1.6">
+    <sources>
+        <source branches-hit="0" branches-valid="0" filename="getraenke.dart" functions-hit="0" functions-valid="0" lines-hit="12" lines-valid="12" prefix="/Hochschule/Semester4/SWT2/project_10_frontend/lib/">
+            <testCase branches-hit="0" functions-hit="0" lines-hit="12" name="&lt;unnamed&gt;"/>
+        </source>
+        <source branches-hit="0" branches-valid="0" filename="pizza.dart" functions-hit="0" functions-valid="0" lines-hit="9" lines-valid="19" prefix="/Hochschule/Semester4/SWT2/project_10_frontend/lib/">
+            <testCase branches-hit="0" functions-hit="0" lines-hit="9" name="&lt;unnamed&gt;"/>
+        </source>
+        <source branches-hit="0" branches-valid="0" filename="Bestellung.dart" functions-hit="0" functions-valid="0" lines-hit="19" lines-valid="24" prefix="/Hochschule/Semester4/SWT2/project_10_frontend/lib/">
+            <testCase branches-hit="0" functions-hit="0" lines-hit="19" name="&lt;unnamed&gt;"/>
+        </source>
+        <source branches-hit="0" branches-valid="0" filename="zutaten.dart" functions-hit="0" functions-valid="0" lines-hit="6" lines-valid="11" prefix="/Hochschule/Semester4/SWT2/project_10_frontend/lib/">
+            <testCase branches-hit="0" functions-hit="0" lines-hit="6" name="&lt;unnamed&gt;"/>
+        </source>
+    </sources>
+    <config branch-coverage="true" description-file="false" function-coverage="true" genhtml_hi_limit="90" genhtml_med_limit="75" legend="false" no-sort="false" no-source="false" show-details="false"/>
+    <base href="../"/>
+    <base href="../"/>
+</coverage>

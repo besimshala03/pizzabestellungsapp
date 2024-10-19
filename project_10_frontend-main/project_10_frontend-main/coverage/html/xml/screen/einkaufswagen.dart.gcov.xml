@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../jgenhtml.xsl"?><coverage branch-rate="NaN" branches-covered="0" branches-valid="0" complexity="0" date="2024-07-01" filename="einkaufswagen.dart" function-rate="NaN" functions-covered="0" functions-valid="0" line-rate="0.91780823" lines-covered="67" lines-valid="73" package="screen" testname="lcov.info" version="1.6">
+    <lines>
+        <line number="1">
+            <code>import 'package:flutter/material.dart';</code>
+        </line>
+        <line number="2">
+            <code>import 'package:http/http.dart' as http;</code>
+        </line>
+        <line number="3">
+            <code>import 'package:intl/intl.dart';</code>
+        </line>
+        <line number="4">
+            <code>import 'package:project_10_frontend/model/MenuItemBase.dart';</code>
+        </line>
+        <line number="5">
+            <code>import 'package:project_10_frontend/model/pizza.dart';</code>
+        </line>
+        <line number="6">
+            <code>import 'package:project_10_frontend/model/getraenke.dart';</code>
+        </line>
+        <line number="7">
+            <code>import 'package:project_10_frontend/warenkorb/cart.dart';</code>
+        </line>
+        <line number="8">
+            <code>import 'package:project_10_frontend/backend/backend.dart';</code>
+        </line>
+        <line number="9">
+            <code/>
+        </line>
+        <line number="10">
+            <code>class Einkaufswagen extends StatefulWidget {</code>
+        </line>
+        <line number="11">
+            <code>  final Cart cart;</code>
+        </line>
+        <line number="12">
+            <code>  final Backend backend;</code>
+        </line>
+        <line number="13">
+            <code>  final http.Client client;</code>
+        </line>
+        <line number="14">
+            <code/>
+        </line>
+        <line hits="1" number="15">
+            <code>  Einkaufswagen({</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="16">
+            <code>    required this.cart,</code>
+        </line>
+        <line number="17">
+            <code>    required this.backend,</code>
+        </line>
+        <line number="18">
+            <code>    required this.client,</code>
+        </line>
+        <line number="19">
+            <code>  });</code>
+        </line>
+        <line number="20">
+            <code/>
+        </line>
+        <line hits="0" number="21">
+            <code>  Einkaufswagen.defaultConstructor()</code>
+        </line>
+        <line hits="0" number="22">
+            <code>      : cart = Cart(),</code>
+        </line>
+        <line hits="0" number="23">
+            <code>        backend = Backend(),</code>
+        </line>
+        <line hits="0" number="24">
+            <code>        client = http.Client();</code>
+        </line>
+        <line number="25">
+            <code/>
+        </line>
+        <line hits="1" number="26">
+            <code>  @override</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="27">
+            <code>  _EinkaufswagenState createState() =&gt; _EinkaufswagenState();</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="28">
+            <code>}</code>
+        </line>
+        <line number="29">
+            <code/>
+        </line>
+        <line number="30">
+            <code>class _EinkaufswagenState extends State&lt;Einkaufswagen&gt; {</code>
+        </line>
+        <line number="31">
+            <code>  final TextEditingController _nameController = TextEditingController();</code>
+        </line>
+        <line number="32">
+            <code>  final TextEditingController _addressController = TextEditingController();</code>
+        </line>
+        <line number="33">
+            <code/>
+        </line>
+        <line hits="1" number="34">
+            <code>  @override</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="35">
+            <code>  Widget build(BuildContext context) {</code>
+        </line>
+        <line hits="3" number="36">
+            <code>    final cartItems = widget.cart.items;</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="37">
+            <code/>
+        </line>
+        <line hits="1" number="38">
+            <code>    return Scaffold(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="39">
+            <code>      appBar: AppBar(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="40">
+            <code>        leading: IconButton(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="41">
+            <code>          icon: Icon(Icons.close),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="0" number="42">
+            <code>          onPressed: () {</code>
+        </line>
+        <line hits="0" number="43">
+            <code>            Navigator.pop(context);</code>
+        </line>
+        <line number="44">
+            <code>          },</code>
+        </line>
+        <line number="45">
+            <code>        ),</code>
+        </line>
+        <line hits="1" number="46">
+            <code>        title: Text('Mixed Eats'),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="47">
+            <code>      ),</code>
+        </line>
+        <line hits="1" number="48">
+            <code>      body: Padding(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="49">
+            <code>        padding: const EdgeInsets.all(16.0),</code>
+        </line>
+        <line hits="1" number="50">
+            <code>        child: Column(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="51">
+            <code>          children: [</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="52">
+            <code>            Expanded(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="53">
+            <code>              child: ListView.builder(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="54">
+            <code>                itemCount: cartItems.length,</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="55">
+            <code>                itemBuilder: (context, index) {</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="56">
+            <code>                  final item = cartItems[index];</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="57">
+            <code>                  return ListTile(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="58">
+            <code>                    leading: SizedBox(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="59">
+            <code>                      width: 90,</code>
+        </line>
+        <line number="60">
+            <code>                      height: 90,</code>
+        </line>
+        <line hits="2" number="61">
+            <code>                      child: Image.asset(item is Pizza</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="62">
+            <code>                          ? 'assets/Pizza_Bilder/${item.imageUrl}'</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="63">
+            <code>                          : 'assets/Getreanke_Bilder/${item.imageUrl}'),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="64">
+            <code>                    ),</code>
+        </line>
+        <line hits="2" number="65">
+            <code>                    title: Text(item.name),</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="4" number="66">
+            <code>                    subtitle: Text('${item.preis.toStringAsFixed(2)} â‚¬'),</code>
+            <hit count="4" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="67">
+            <code>                    trailing: IconButton(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="68">
+            <code>                      icon: Icon(Icons.delete, color: Colors.red),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="69">
+            <code>                      onPressed: () =&gt; _removeItem(item),</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="70">
+            <code>                    ),</code>
+        </line>
+        <line number="71">
+            <code>                  );</code>
+        </line>
+        <line number="72">
+            <code>                },</code>
+        </line>
+        <line number="73">
+            <code>              ),</code>
+        </line>
+        <line number="74">
+            <code>            ),</code>
+        </line>
+        <line hits="1" number="75">
+            <code>            TextField(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="76">
+            <code>              controller: _nameController,</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="77">
+            <code>              decoration: InputDecoration(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="78">
+            <code>                border: OutlineInputBorder(),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="79">
+            <code>                labelText: 'Name',</code>
+        </line>
+        <line number="80">
+            <code>              ),</code>
+        </line>
+        <line number="81">
+            <code>            ),</code>
+        </line>
+        <line hits="1" number="82">
+            <code>            SizedBox(height: 10),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="83">
+            <code>            TextField(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="84">
+            <code>              controller: _addressController,</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="85">
+            <code>              decoration: InputDecoration(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="86">
+            <code>                border: OutlineInputBorder(),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="87">
+            <code>                labelText: 'Adresse',</code>
+        </line>
+        <line number="88">
+            <code>              ),</code>
+        </line>
+        <line number="89">
+            <code>            ),</code>
+        </line>
+        <line hits="1" number="90">
+            <code>            SizedBox(height: 20),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="91">
+            <code>            Divider(),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="92">
+            <code>            Padding(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="93">
+            <code>              padding: const EdgeInsets.symmetric(horizontal: 16.0),</code>
+        </line>
+        <line hits="1" number="94">
+            <code>              child: Row(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="95">
+            <code>                mainAxisAlignment: MainAxisAlignment.spaceBetween,</code>
+        </line>
+        <line hits="1" number="96">
+            <code>                children: [</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="97">
+            <code>                  Text('Zwischensumme'),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="6" number="98">
+            <code>                  Text('${widget.cart.calculateTotal().toStringAsFixed(2)} â‚¬'),</code>
+            <hit count="6" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="99">
+            <code>                ],</code>
+        </line>
+        <line number="100">
+            <code>              ),</code>
+        </line>
+        <line number="101">
+            <code>            ),</code>
+        </line>
+        <line hits="1" number="102">
+            <code>            SizedBox(height: 20),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="103">
+            <code>            ElevatedButton(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="104">
+            <code>              onPressed: () async {</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="105">
+            <code>                var dateTimeNow = DateTime.now();</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="106">
+            <code>                String formattedDate = DateFormat('yyyy-MM-dd â€“ kk:mm').format(dateTimeNow);</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="107">
+            <code/>
+        </line>
+        <line number="108">
+            <code>                try {</code>
+        </line>
+        <line hits="3" number="109">
+            <code>                  await widget.backend.addBestellung(</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="110">
+            <code>                    widget.client,</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="111">
+            <code>                    cartItems.whereType&lt;Pizza&gt;().toList(),</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="112">
+            <code>                    cartItems.whereType&lt;Getraenke&gt;().toList(),</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="3" number="113">
+            <code>                    widget.cart.calculateTotal(),</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="114">
+            <code>                    formattedDate,</code>
+        </line>
+        <line hits="2" number="115">
+            <code>                    _nameController.text,</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="116">
+            <code>                    _addressController.text,</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="117">
+            <code>                  );</code>
+        </line>
+        <line number="118">
+            <code/>
+        </line>
+        <line hits="3" number="119">
+            <code>                  widget.cart.clear();</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="120">
+            <code/>
+        </line>
+        <line hits="1" number="121">
+            <code>                  print('Bestellung erfolgreich hinzugefÃ¼gt!');</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="122">
+            <code>                  Navigator.pushNamed(context, '/main_page');</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="123">
+            <code>                } catch (e) {</code>
+        </line>
+        <line hits="2" number="124">
+            <code>                  print('Fehler beim HinzufÃ¼gen der Bestellung: $e');</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="125">
+            <code>                  ScaffoldMessenger.of(context).showSnackBar(</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="126">
+            <code>                    SnackBar(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="127">
+            <code>                      content: Text('Fehler beim HinzufÃ¼gen der Bestellung'),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="128">
+            <code>                    ),</code>
+        </line>
+        <line number="129">
+            <code>                  );</code>
+        </line>
+        <line number="130">
+            <code>                }</code>
+        </line>
+        <line number="131">
+            <code>              },</code>
+        </line>
+        <line hits="1" number="132">
+            <code>              child: Text('Bestellung abschicken'),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="133">
+            <code>            ),</code>
+        </line>
+        <line number="134">
+            <code>          ],</code>
+        </line>
+        <line number="135">
+            <code>        ),</code>
+        </line>
+        <line number="136">
+            <code>      ),</code>
+        </line>
+        <line number="137">
+            <code>    );</code>
+        </line>
+        <line number="138">
+            <code>  }</code>
+        </line>
+        <line number="139">
+            <code/>
+        </line>
+        <line hits="1" number="140">
+            <code>  void _removeItem(MenuItemBase item) {</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="141">
+            <code>    setState(() {</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="3" number="142">
+            <code>      widget.cart.removeItem(item);</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="143">
+            <code>    });</code>
+        </line>
+        <line number="144">
+            <code>  }</code>
+        </line>
+        <line number="145">
+            <code>}</code>
+        </line>
+    </lines>
+    <config branch-coverage="true" description-file="false" function-coverage="true" genhtml_hi_limit="90" genhtml_med_limit="75" legend="false" no-sort="false" no-source="false" show-details="false"/>
+    <base href="../"/>
+    <base href="../"/>
+</coverage>

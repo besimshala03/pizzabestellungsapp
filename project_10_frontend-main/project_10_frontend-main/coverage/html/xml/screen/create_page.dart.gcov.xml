@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../jgenhtml.xsl"?><coverage branch-rate="NaN" branches-covered="0" branches-valid="0" complexity="0" date="2024-05-06" filename="create_page.dart" function-rate="NaN" functions-covered="0" functions-valid="0" line-rate="0.9375" lines-covered="30" lines-valid="32" package="screen" testname="lcov.info" version="1.6">
+    <lines>
+        <line number="1">
+            <code>import 'package:flutter/material.dart';</code>
+        </line>
+        <line number="2">
+            <code>import 'package:namer_app/backend/backend.dart';</code>
+        </line>
+        <line number="3">
+            <code>import 'package:http/http.dart' as http;</code>
+        </line>
+        <line number="4">
+            <code/>
+        </line>
+        <line number="5">
+            <code/>
+        </line>
+        <line number="6">
+            <code>class CreateItemPage extends StatefulWidget {</code>
+        </line>
+        <line number="7">
+            <code>  final Backend _backend;</code>
+        </line>
+        <line number="8">
+            <code>  final http.Client _client;</code>
+        </line>
+        <line number="9">
+            <code/>
+        </line>
+        <line hits="2" number="10">
+            <code>  const CreateItemPage(this._backend, this._client);</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="11">
+            <code/>
+        </line>
+        <line hits="2" number="12">
+            <code>  @override</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="13">
+            <code>  CreateItemPageState createState() {</code>
+        </line>
+        <line hits="2" number="14">
+            <code>    return CreateItemPageState();</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="15">
+            <code>  }</code>
+        </line>
+        <line number="16">
+            <code>}</code>
+        </line>
+        <line number="17">
+            <code/>
+        </line>
+        <line number="18">
+            <code>class CreateItemPageState extends State&lt;CreateItemPage&gt; {</code>
+        </line>
+        <line number="19">
+            <code/>
+        </line>
+        <line number="20">
+            <code>  final _formKey = GlobalKey&lt;FormState&gt;();</code>
+        </line>
+        <line number="21">
+            <code>  late Backend _backend;</code>
+        </line>
+        <line number="22">
+            <code>  late http.Client _client;</code>
+        </line>
+        <line number="23">
+            <code/>
+        </line>
+        <line hits="2" number="24">
+            <code>  @override</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="25">
+            <code>  void initState() {</code>
+        </line>
+        <line hits="2" number="26">
+            <code>    super.initState();</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="6" number="27">
+            <code>    _backend = widget._backend;</code>
+            <hit count="6" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="6" number="28">
+            <code>    _client = widget._client;</code>
+            <hit count="6" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="29">
+            <code>  }</code>
+        </line>
+        <line number="30">
+            <code/>
+        </line>
+        <line hits="2" number="31">
+            <code>  @override</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="32">
+            <code>  Widget build(BuildContext context) {</code>
+        </line>
+        <line number="33">
+            <code/>
+        </line>
+        <line hits="2" number="34">
+            <code>  TextEditingController nameController = TextEditingController();</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="35">
+            <code>  TextEditingController descriptionController = TextEditingController();</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="36">
+            <code/>
+        </line>
+        <line hits="2" number="37">
+            <code>  final nameField = TextFormField(</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="38">
+            <code>    key: Key("name"),</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="39">
+            <code>    controller: nameController,</code>
+        </line>
+        <line number="40">
+            <code>    keyboardType: TextInputType.text,</code>
+        </line>
+        <line hits="2" number="41">
+            <code>    decoration: InputDecoration (</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="42">
+            <code>      hintText: "Please enter item name"</code>
+        </line>
+        <line number="43">
+            <code>    ),</code>
+        </line>
+        <line hits="1" number="44">
+            <code>    validator: (text) {</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="45">
+            <code>      if (text == null || text.isEmpty) {</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="46">
+            <code>        return 'Error: please enter item name';</code>
+        </line>
+        <line number="47">
+            <code>      }</code>
+        </line>
+        <line number="48">
+            <code>      return null;</code>
+        </line>
+        <line number="49">
+            <code>    },</code>
+        </line>
+        <line number="50">
+            <code>  );</code>
+        </line>
+        <line number="51">
+            <code/>
+        </line>
+        <line hits="2" number="52">
+            <code>  final descriptionField = TextFormField(</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="53">
+            <code>    key: Key("desc"),</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="54">
+            <code>    controller: descriptionController,</code>
+        </line>
+        <line number="55">
+            <code>    keyboardType: TextInputType.multiline,</code>
+        </line>
+        <line number="56">
+            <code>    maxLines: 4,</code>
+        </line>
+        <line hits="2" number="57">
+            <code>    decoration: InputDecoration (</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="58">
+            <code>      hintText: "Please enter item description",</code>
+        </line>
+        <line number="59">
+            <code>    ),</code>
+        </line>
+        <line hits="1" number="60">
+            <code>    validator: (text) {</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="61">
+            <code>      if (text == null || text.isEmpty) {</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="62">
+            <code>        return 'Error: please enter item description';</code>
+        </line>
+        <line number="63">
+            <code>      }</code>
+        </line>
+        <line number="64">
+            <code>      return null;</code>
+        </line>
+        <line number="65">
+            <code>    },</code>
+        </line>
+        <line number="66">
+            <code>  );</code>
+        </line>
+        <line number="67">
+            <code/>
+        </line>
+        <line number="68">
+            <code/>
+        </line>
+        <line hits="2" number="69">
+            <code>  final saveButton = ElevatedButton( //Button Color is as define in theme</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="70">
+            <code>      key: Key("save"),</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="71">
+            <code>      onPressed: () {</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="3" number="72">
+            <code>        if (_formKey.currentState!.validate()) {</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="0" number="73">
+            <code>          _backend.createItem(_client, nameController.text, descriptionController.text)</code>
+        </line>
+        <line hits="0" number="74">
+            <code>          .then((value) =&gt; Navigator.pop(context));</code>
+        </line>
+        <line number="75">
+            <code>        }</code>
+        </line>
+        <line number="76">
+            <code>      },</code>
+        </line>
+        <line hits="2" number="77">
+            <code>      child: Text('Create'), //Text Color as define in theme</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="78">
+            <code>    );</code>
+        </line>
+        <line number="79">
+            <code/>
+        </line>
+        <line hits="2" number="80">
+            <code>    return Form(</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="81">
+            <code>      key: _formKey,</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="82">
+            <code>      child: ListView(</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="83">
+            <code>        padding: EdgeInsets.symmetric(vertical: 40, horizontal: 20),</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="84">
+            <code>        children: &lt;Widget&gt;[</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="85">
+            <code>          nameField,</code>
+        </line>
+        <line number="86">
+            <code>          descriptionField,</code>
+        </line>
+        <line number="87">
+            <code>          saveButton</code>
+        </line>
+        <line number="88">
+            <code>        ],</code>
+        </line>
+        <line number="89">
+            <code>      ),</code>
+        </line>
+        <line number="90">
+            <code>    );</code>
+        </line>
+        <line number="91">
+            <code>  }</code>
+        </line>
+        <line number="92">
+            <code>}</code>
+        </line>
+    </lines>
+    <config branch-coverage="true" description-file="false" function-coverage="true" genhtml_hi_limit="90" genhtml_med_limit="75" legend="false" no-sort="false" no-source="false" show-details="false"/>
+    <base href="../"/>
+    <base href="../"/>
+</coverage>

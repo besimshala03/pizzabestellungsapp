@@ -1,0 +1,44 @@
+name: project_10_frontend
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 0.0.1+1
+
+environment:
+  sdk: ^3.1.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: any
+  intl: ^0.17.0  # Check for the latest version on pub.dev
+
+
+  english_words: ^4.0.0
+  provider: ^6.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  test: ^1.24.9
+  mockito: ^5.4.4
+  build_runner: ^2.4.8
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/WhatsApp Image 2024-05-29 at 00.13.16.jpeg
+    - assets/Pizza_Bilder/Pizza_Funghi.jpeg
+    - assets/Pizza_Bilder/Pizza_Hawaii.jpeg
+    - assets/Pizza_Bilder/Pizza_Margherita.jpeg
+    - assets/Pizza_Bilder/Pizza_Salami.jpeg
+    - assets/Pizza_Bilder/Pizza_Tonno.jpeg
+    - assets/Getreanke_Bilder/Coca_Cola.png
+    - assets/Getreanke_Bilder/Fanta_Orange.png
+    - assets/Getreanke_Bilder/Red_Bull.png
+    - assets/Getreanke_Bilder/Wolfra_Schorle_Apfel.png
+

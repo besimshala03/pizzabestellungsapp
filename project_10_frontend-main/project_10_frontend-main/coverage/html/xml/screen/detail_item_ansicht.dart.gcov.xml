@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../jgenhtml.xsl"?><coverage branch-rate="NaN" branches-covered="0" branches-valid="0" complexity="0" date="2024-07-01" filename="detail_item_ansicht.dart" function-rate="NaN" functions-covered="0" functions-valid="0" line-rate="0.7741935" lines-covered="72" lines-valid="93" package="screen" testname="lcov.info" version="1.6">
+    <lines>
+        <line number="1">
+            <code>import 'package:flutter/material.dart';</code>
+        </line>
+        <line number="2">
+            <code>import 'package:project_10_frontend/backend/backend.dart';</code>
+        </line>
+        <line number="3">
+            <code>import 'package:project_10_frontend/model/pizza.dart';</code>
+        </line>
+        <line number="4">
+            <code>import 'package:project_10_frontend/model/zutaten.dart';</code>
+        </line>
+        <line number="5">
+            <code>import 'package:http/http.dart' as http;</code>
+        </line>
+        <line number="6">
+            <code>import 'package:project_10_frontend/warenkorb/cart.dart';</code>
+        </line>
+        <line number="7">
+            <code/>
+        </line>
+        <line number="8">
+            <code>class PizzaDetailScreen extends StatefulWidget {</code>
+        </line>
+        <line number="9">
+            <code>  final Pizza pizza;</code>
+        </line>
+        <line number="10">
+            <code>  final Backend backend;</code>
+        </line>
+        <line number="11">
+            <code>  final http.Client client;</code>
+        </line>
+        <line number="12">
+            <code/>
+        </line>
+        <line hits="1" number="13">
+            <code>  PizzaDetailScreen({required this.pizza, required this.backend, required this.client});</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="14">
+            <code/>
+        </line>
+        <line hits="1" number="15">
+            <code>  @override</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="16">
+            <code>  _PizzaDetailScreenState createState() =&gt; _PizzaDetailScreenState();</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="17">
+            <code>}</code>
+        </line>
+        <line number="18">
+            <code/>
+        </line>
+        <line number="19">
+            <code>class _PizzaDetailScreenState extends State&lt;PizzaDetailScreen&gt; {</code>
+        </line>
+        <line number="20">
+            <code>  List&lt;Zutaten&gt; selectedZutaten = [];</code>
+        </line>
+        <line number="21">
+            <code>  List&lt;Zutaten&gt; availableZutaten = [];</code>
+        </line>
+        <line number="22">
+            <code>  late double totalPrice;</code>
+        </line>
+        <line number="23">
+            <code/>
+        </line>
+        <line hits="1" number="24">
+            <code>  @override</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="25">
+            <code>  void initState() {</code>
+        </line>
+        <line hits="1" number="26">
+            <code>    super.initState();</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="4" number="27">
+            <code>    totalPrice = widget.pizza.preis;</code>
+            <hit count="4" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="28">
+            <code>    _loadZutaten();</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="29">
+            <code>  }</code>
+        </line>
+        <line number="30">
+            <code/>
+        </line>
+        <line hits="1" number="31">
+            <code>  void _loadZutaten() async {</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="32">
+            <code>    try {</code>
+        </line>
+        <line hits="5" number="33">
+            <code>      List&lt;Zutaten&gt; zutaten = await widget.backend.fetchZutatenData(widget.client);</code>
+            <hit count="5" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="34">
+            <code>      setState(() {</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="35">
+            <code>        availableZutaten = zutaten;</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="36">
+            <code>      });</code>
+        </line>
+        <line number="37">
+            <code>    } catch (e) {</code>
+        </line>
+        <line hits="0" number="38">
+            <code>      print('Fehler beim Laden der Zutaten: $e');</code>
+        </line>
+        <line number="39">
+            <code>    }</code>
+        </line>
+        <line number="40">
+            <code>  }</code>
+        </line>
+        <line number="41">
+            <code/>
+        </line>
+        <line hits="1" number="42">
+            <code>  void _toggleZutat(Zutaten zutat) {</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="43">
+            <code>    setState(() {</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="44">
+            <code>      if (selectedZutaten.contains(zutat)) {</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="0" number="45">
+            <code>        selectedZutaten.remove(zutat);</code>
+        </line>
+        <line hits="0" number="46">
+            <code>        totalPrice -= zutat.preis;</code>
+        </line>
+        <line number="47">
+            <code>      } else {</code>
+        </line>
+        <line hits="2" number="48">
+            <code>        selectedZutaten.add(zutat);</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="3" number="49">
+            <code>        totalPrice += zutat.preis;</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="50">
+            <code>      }</code>
+        </line>
+        <line number="51">
+            <code>    });</code>
+        </line>
+        <line number="52">
+            <code>  }</code>
+        </line>
+        <line number="53">
+            <code/>
+        </line>
+        <line hits="1" number="54">
+            <code>  @override</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="55">
+            <code>  Widget build(BuildContext context) {</code>
+        </line>
+        <line hits="1" number="56">
+            <code>    return Scaffold(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="57">
+            <code>      appBar: AppBar(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="58">
+            <code>        backgroundColor: Colors.transparent,</code>
+        </line>
+        <line number="59">
+            <code>        elevation: 0,</code>
+        </line>
+        <line hits="1" number="60">
+            <code>        leading: IconButton(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="61">
+            <code>          icon: Icon(Icons.close, color: Colors.black),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="0" number="62">
+            <code>          onPressed: () {</code>
+        </line>
+        <line hits="0" number="63">
+            <code>            Navigator.pop(context);</code>
+        </line>
+        <line number="64">
+            <code>          },</code>
+        </line>
+        <line number="65">
+            <code>        ),</code>
+        </line>
+        <line hits="1" number="66">
+            <code>        actions: [</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="67">
+            <code>          IconButton(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="68">
+            <code>            icon: Icon(Icons.share, color: Colors.black),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="0" number="69">
+            <code>            onPressed: () {},</code>
+        </line>
+        <line number="70">
+            <code>          ),</code>
+        </line>
+        <line number="71">
+            <code>        ],</code>
+        </line>
+        <line number="72">
+            <code>      ),</code>
+        </line>
+        <line number="73">
+            <code>      extendBodyBehindAppBar: true,</code>
+        </line>
+        <line hits="1" number="74">
+            <code>      body: SingleChildScrollView(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="75">
+            <code>        child: Column(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="76">
+            <code>          crossAxisAlignment: CrossAxisAlignment.start,</code>
+        </line>
+        <line hits="1" number="77">
+            <code>          children: [</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="78">
+            <code>            Stack(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="79">
+            <code>              children: [</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="80">
+            <code>                Image.asset(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="4" number="81">
+            <code>                  'assets/Pizza_Bilder/${widget.pizza.imageUrl}',</code>
+            <hit count="4" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="82">
+            <code>                  width: double.infinity,</code>
+        </line>
+        <line number="83">
+            <code>                  height: 250,</code>
+        </line>
+        <line number="84">
+            <code>                  fit: BoxFit.cover,</code>
+        </line>
+        <line number="85">
+            <code>                ),</code>
+        </line>
+        <line hits="1" number="86">
+            <code>                Positioned(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="87">
+            <code>                  top: 40,</code>
+        </line>
+        <line number="88">
+            <code>                  left: 16,</code>
+        </line>
+        <line hits="1" number="89">
+            <code>                  child: IconButton(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="90">
+            <code>                    icon: Icon(Icons.close, color: Colors.white),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="0" number="91">
+            <code>                    onPressed: () {</code>
+        </line>
+        <line hits="0" number="92">
+            <code>                      Navigator.pop(context);</code>
+        </line>
+        <line number="93">
+            <code>                    },</code>
+        </line>
+        <line number="94">
+            <code>                  ),</code>
+        </line>
+        <line number="95">
+            <code>                ),</code>
+        </line>
+        <line hits="1" number="96">
+            <code>                Positioned(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="97">
+            <code>                  top: 40,</code>
+        </line>
+        <line number="98">
+            <code>                  right: 16,</code>
+        </line>
+        <line hits="1" number="99">
+            <code>                  child: IconButton(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="100">
+            <code>                    icon: Icon(Icons.share, color: Colors.white),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="0" number="101">
+            <code>                    onPressed: () {},</code>
+        </line>
+        <line number="102">
+            <code>                  ),</code>
+        </line>
+        <line number="103">
+            <code>                ),</code>
+        </line>
+        <line number="104">
+            <code>              ],</code>
+        </line>
+        <line number="105">
+            <code>            ),</code>
+        </line>
+        <line hits="1" number="106">
+            <code>            Padding(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="107">
+            <code>              padding: const EdgeInsets.all(16.0),</code>
+        </line>
+        <line hits="1" number="108">
+            <code>              child: Column(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="109">
+            <code>                crossAxisAlignment: CrossAxisAlignment.start,</code>
+        </line>
+        <line hits="1" number="110">
+            <code>                children: [</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="111">
+            <code>                  Text(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="3" number="112">
+            <code>                    widget.pizza.name,</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="113">
+            <code>                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="114">
+            <code>                  ),</code>
+        </line>
+        <line hits="1" number="115">
+            <code>                  SizedBox(height: 8),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="116">
+            <code>                  Text(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="5" number="117">
+            <code>                    '${widget.pizza.preis.toStringAsFixed(2)} â‚¬',</code>
+            <hit count="5" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="118">
+            <code>                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="119">
+            <code>                  ),</code>
+        </line>
+        <line hits="1" number="120">
+            <code>                  SizedBox(height: 8),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="121">
+            <code>                  Text(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="3" number="122">
+            <code>                    widget.pizza.beschreibung,</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="123">
+            <code>                    style: TextStyle(fontSize: 16),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="124">
+            <code>                  ),</code>
+        </line>
+        <line hits="1" number="125">
+            <code>                  SizedBox(height: 8),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="126">
+            <code>                  availableZutaten.isEmpty</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="127">
+            <code>                      ? CircularProgressIndicator()</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="128">
+            <code>                      : Column(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="3" number="129">
+            <code>                          children: availableZutaten.map((zutat) {</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="2" number="130">
+            <code>                            bool isSelected = selectedZutaten.contains(zutat);</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="131">
+            <code>                            return ListTile(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="132">
+            <code>                              contentPadding: EdgeInsets.zero,</code>
+        </line>
+        <line hits="2" number="133">
+            <code>                              title: Text(zutat.name),</code>
+            <hit count="2" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="4" number="134">
+            <code>                              subtitle: Text('${zutat.preis.toStringAsFixed(2)} â‚¬'),</code>
+            <hit count="4" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="135">
+            <code>                              trailing: isSelected</code>
+        </line>
+        <line hits="1" number="136">
+            <code>                                  ? Icon(Icons.check_box, color: Colors.green)</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="137">
+            <code>                                  : Icon(Icons.check_box_outline_blank),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="138">
+            <code>                              onTap: () {</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="139">
+            <code>                                _toggleZutat(zutat);</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="140">
+            <code>                              },</code>
+        </line>
+        <line number="141">
+            <code>                            );</code>
+        </line>
+        <line hits="1" number="142">
+            <code>                          }).toList(),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="143">
+            <code>                        ),</code>
+        </line>
+        <line number="144">
+            <code>                ],</code>
+        </line>
+        <line number="145">
+            <code>              ),</code>
+        </line>
+        <line number="146">
+            <code>            ),</code>
+        </line>
+        <line number="147">
+            <code>          ],</code>
+        </line>
+        <line number="148">
+            <code>        ),</code>
+        </line>
+        <line number="149">
+            <code>      ),</code>
+        </line>
+        <line hits="1" number="150">
+            <code>      bottomNavigationBar: BottomAppBar(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="151">
+            <code>        child: Container(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="152">
+            <code>          width: double.infinity,</code>
+        </line>
+        <line number="153">
+            <code>          color: Colors.black,</code>
+        </line>
+        <line hits="1" number="154">
+            <code>          child: Padding(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="155">
+            <code>            padding: const EdgeInsets.symmetric(vertical: 16.0),</code>
+        </line>
+        <line hits="1" number="156">
+            <code>            child: TextButton(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="0" number="157">
+            <code>              onPressed: () {</code>
+        </line>
+        <line number="158">
+            <code>                // Erstellen einer neuen Pizza-Instanz mit den ausgewÃ¤hlten Zutaten</code>
+        </line>
+        <line hits="0" number="159">
+            <code>                final pizzaMitZutaten = Pizza(</code>
+        </line>
+        <line hits="0" number="160">
+            <code>                  id: widget.pizza.id,</code>
+        </line>
+        <line hits="0" number="161">
+            <code>                  name: widget.pizza.name,</code>
+        </line>
+        <line hits="0" number="162">
+            <code>                  beschreibung: widget.pizza.beschreibung,</code>
+        </line>
+        <line hits="0" number="163">
+            <code>                  preis: totalPrice,</code>
+        </line>
+        <line hits="0" number="164">
+            <code>                  imageUrl: widget.pizza.imageUrl,</code>
+        </line>
+        <line hits="0" number="165">
+            <code>                  zutaten: selectedZutaten,</code>
+        </line>
+        <line number="166">
+            <code>                );</code>
+        </line>
+        <line number="167">
+            <code/>
+        </line>
+        <line number="168">
+            <code>                // Artikel zum Warenkorb hinzufÃ¼gen</code>
+        </line>
+        <line hits="0" number="169">
+            <code>                Cart().addItem(pizzaMitZutaten);</code>
+        </line>
+        <line hits="0" number="170">
+            <code>                print(pizzaMitZutaten);</code>
+        </line>
+        <line hits="0" number="171">
+            <code>                print(Cart().items);</code>
+        </line>
+        <line number="172">
+            <code/>
+        </line>
+        <line number="173">
+            <code>                // ZurÃ¼ck zur Ãœbersicht navigieren</code>
+        </line>
+        <line hits="0" number="174">
+            <code>                Navigator.pop(context);</code>
+        </line>
+        <line number="175">
+            <code>              },</code>
+        </line>
+        <line hits="1" number="176">
+            <code>              child: Text(</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="3" number="177">
+            <code>                'Dem Warenkorb hinzufÃ¼gen â€¢ ${totalPrice.toStringAsFixed(2)} â‚¬',</code>
+            <hit count="3" name="&lt;unnamed&gt;"/>
+        </line>
+        <line hits="1" number="178">
+            <code>                style: TextStyle(fontSize: 16, color: Colors.white),</code>
+            <hit count="1" name="&lt;unnamed&gt;"/>
+        </line>
+        <line number="179">
+            <code>              ),</code>
+        </line>
+        <line number="180">
+            <code>            ),</code>
+        </line>
+        <line number="181">
+            <code>          ),</code>
+        </line>
+        <line number="182">
+            <code>        ),</code>
+        </line>
+        <line number="183">
+            <code>      ),</code>
+        </line>
+        <line number="184">
+            <code>    );</code>
+        </line>
+        <line number="185">
+            <code>  }</code>
+        </line>
+        <line number="186">
+            <code>}</code>
+        </line>
+    </lines>
+    <config branch-coverage="true" description-file="false" function-coverage="true" genhtml_hi_limit="90" genhtml_med_limit="75" legend="false" no-sort="false" no-source="false" show-details="false"/>
+    <base href="../"/>
+    <base href="../"/>
+</coverage>
